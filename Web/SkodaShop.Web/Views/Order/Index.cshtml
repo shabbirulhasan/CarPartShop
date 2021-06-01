@@ -1,0 +1,89 @@
+﻿@model IEnumerable<SkodaShop.Data.Models.Order>
+@{
+    ViewBag.Title = "Order";
+}
+
+<div class="col-md-8">
+    <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <td>Receiver name</td>
+                        <td>Phone number</td>
+                        <td>E-mail</td>
+                        <td>Address</td>                        
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var order in Model)
+                    {
+                        <tr>
+                            <td>@order.ReceiverName</td>
+                            <td>@order.PhoneNumber</td>
+                            <td>@order.Email</td>
+                            <td>@order.Address</td>                          
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    <div class="col-md-7">
+
+        <form action="" method="post" id="checkOutForm" role="form">
+            <div class="form-group">
+                <span>Contact name:</span><br>
+                <input type="text" name="name" value="" class="form-control"><br />
+            </div>
+            <div class="form-group">
+                <span>Phone number:</span><br>
+                <input type="text" name="phone" value="" class="form-control"><br />
+            </div>
+            <div class="form-group">
+                <span>Email:</span><br>
+                <input type="text" name="email" value="" class="form-control"><br />
+            </div>
+            <span>Delivery address:</span><br />
+            <div class="dropdown">
+                <select name="addressDrop" class="dropdown-menu">
+                    <option value="">choose address</option>
+                    <option value="от нашия офис">from our office</option>
+                    <option value="друг">another address</option>
+                </select><br>
+            </div>
+            <span style="font-size:10px;">fill if you want delivery to another address</span><br>
+            <input type="text" name="address" value="" class="form-control"><br>
+            <div class="radio">
+                <span>Choose payment method:</span><br>
+                <input type="radio" name="payment" id="payPlace" value="на място в офиса">
+                <label for="payPlace">in office</label><br>
+                <input type="radio" name="payment" id="payRecieve" value="наложен платеж">
+                <label for="payRecieve">on delivery</label><br>
+                <input type="radio" name="payment" id="payBank" value="по банков път">
+                <label for="payBank">bank transfer</label><br>
+                <input type="radio" name="payment" id="payEpay" value="чрез ePay">
+                <label for="payEpay">with ePay</label><br>
+                <input type="radio" name="payment" id="payEasyPay" value="чрез EasyPay">
+                <label for="payEasyPay">with EasyPay</label><br><br>
+            </div>
+            <input type="checkbox" name="uslovia" id="uslovia">
+            <label for="uslovia">I agree with <a href="~/Terms/Index">Terms and conditions</a></label><br><br>
+            @*<div class="clear"></div>*@
+            <input type="submit" value="Order">
+        </form>
+        @*<script language="javascript">
+                function updateQty(part, qty) {
+                    var jqxhr = $.ajax("#" + part + "&s=ts644vp1dvo0vjrp0fvbnhfe64&q=" + qty)
+                      .done(function () {
+                          location.reload();
+                      })
+                      .fail(function () {
+                          alert("Възникна грешка, моля опитайте по-късно.");
+                      })
+                      .always(function () {
+                      });
+                }
+            </script>*@
+    </div>
+</div>

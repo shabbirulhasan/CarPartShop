@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31010.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{0693FEE5-DB27-411F-A7A2-74019CC18671}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{C0C8003C-14C2-4592-A1DB-ACECD71AE28B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkodaShop.Web", "Web\SkodaShop.Web\SkodaShop.Web.csproj", "{9493C210-FFAB-4760-8896-F8EA5F88DCBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkodaShop.Web.Tests", "Web\SkodaShop.Web.Tests\SkodaShop.Web.Tests.csproj", "{ED76B511-9CA5-43B9-81E5-2F764901C7EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{74AB943E-3067-4733-8DD6-BCC96FBD349D}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkodaShop.Data", "Data\SkodaShop.Data\SkodaShop.Data.csproj", "{7CCB1579-CE78-496B-8166-78A9F1E3B8C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkodaShop.Data.Models", "Data\SkodaShop.Data.Models\SkodaShop.Data.Models.csproj", "{CEA32B86-33E4-4025-8C26-5C0304582D32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkodaShop.Data.Common", "Data\SkodaShop.Data.Common\SkodaShop.Data.Common.csproj", "{04E1A573-B483-4514-905C-C5E33B582F86}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9493C210-FFAB-4760-8896-F8EA5F88DCBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9493C210-FFAB-4760-8896-F8EA5F88DCBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9493C210-FFAB-4760-8896-F8EA5F88DCBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9493C210-FFAB-4760-8896-F8EA5F88DCBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED76B511-9CA5-43B9-81E5-2F764901C7EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED76B511-9CA5-43B9-81E5-2F764901C7EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED76B511-9CA5-43B9-81E5-2F764901C7EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED76B511-9CA5-43B9-81E5-2F764901C7EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CCB1579-CE78-496B-8166-78A9F1E3B8C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CCB1579-CE78-496B-8166-78A9F1E3B8C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CCB1579-CE78-496B-8166-78A9F1E3B8C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CCB1579-CE78-496B-8166-78A9F1E3B8C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEA32B86-33E4-4025-8C26-5C0304582D32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEA32B86-33E4-4025-8C26-5C0304582D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEA32B86-33E4-4025-8C26-5C0304582D32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEA32B86-33E4-4025-8C26-5C0304582D32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04E1A573-B483-4514-905C-C5E33B582F86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04E1A573-B483-4514-905C-C5E33B582F86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04E1A573-B483-4514-905C-C5E33B582F86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04E1A573-B483-4514-905C-C5E33B582F86}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9493C210-FFAB-4760-8896-F8EA5F88DCBF} = {C0C8003C-14C2-4592-A1DB-ACECD71AE28B}
+		{ED76B511-9CA5-43B9-81E5-2F764901C7EB} = {C0C8003C-14C2-4592-A1DB-ACECD71AE28B}
+		{7CCB1579-CE78-496B-8166-78A9F1E3B8C9} = {0693FEE5-DB27-411F-A7A2-74019CC18671}
+		{CEA32B86-33E4-4025-8C26-5C0304582D32} = {0693FEE5-DB27-411F-A7A2-74019CC18671}
+		{04E1A573-B483-4514-905C-C5E33B582F86} = {0693FEE5-DB27-411F-A7A2-74019CC18671}
+	EndGlobalSection
+EndGlobal

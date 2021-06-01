@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <meta name="description" content="The description of my page" />
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Car Part Shop", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Products", "Index", "Product")</li>
+                    <li>@Html.ActionLink("Orders", "Index", "Order")</li>
+                    <li>@Html.ActionLink("Cart", "Index", "Cart")</li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Admin", "Index", "Admin")</li>
+                    }                    
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <div class="row">
+            <div class="col-md-3 list-group">
+                <h2>Product groups</h2>
+                <a href="#" class="list-group-item">Exhaust</a>                
+                <a href="#" class="list-group-item">Fuel system</a>
+                <a href="#" class="list-group-item">Oils</a>
+                <a href="#" class="list-group-item">Sensors</a>
+                <a href="#" class="list-group-item">Engine</a>
+                <a href="#" class="list-group-item">Electric system</a>
+                <a href="#" class="list-group-item">Cables</a>
+                <a href="#" class="list-group-item">Ignition system</a>
+                <a href="#" class="list-group-item">Tools and equipments</a>
+                <a href="#" class="list-group-item">Airconditions</a>
+                <a href="#" class="list-group-item">Steering system</a>                
+                <a href="#" class="list-group-item">Car equipment</a>
+                <a href="#" class="list-group-item">Lighting system</a>                
+                <a href="#" class="list-group-item">Belts</a>
+                <a href="#" class="list-group-item">Semmerings</a>
+                <a href="#" class="list-group-item">Stoping system</a>                
+                <a href="#" class="list-group-item">Transmission</a>
+                <a href="#" class="list-group-item">Filters</a>
+                <a href="#" class="list-group-item">Chassis parts</a>
+                <a href="#" class="list-group-item">Body parts</a>
+                <a href="#" class="list-group-item">Engine parts</a>
+            </div>
+
+            @RenderBody()
+
+            <div class="col-md-3">
+
+            </div>
+        </div>
+        
+    </div>
+
+    <footer class="panel-footer">
+        <div class="row list-inline">
+            <a href="~/Home/Index" class="col-md-2">Home</a>
+            <a href="~/FAQ/Question" class="col-md-2">FAQ</a>
+            <a href="#" class="col-md-2">Return policy</a>
+            <a href="~/Home/About" class="col-md-2">About</a>
+            <a href="~/Terms/Index" class="col-md-2">Term and condition</a>
+            <a href="~/Home/Contact" class="col-md-2">Contact</a>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
